@@ -22,44 +22,46 @@ class MainActivity : AppCompatActivity() {
         var num3:Double=3.0
 
         button1.setOnClickListener {
-            Log.d("UI_PARTS", "+ボタンをタップしました")
-            Log.d("UI_PARTS", editText1.text.toString())
-            Log.d("UI_PARTS", editText2.text.toString())
-            num1 = editText1.text.toString().toDouble()
-            num2 = editText2.text.toString().toDouble()
-            num3 = num1 + num2
-            textView1.text =num3.toString()
 
-
+            if (editText1.text.toString()=="" || editText2.text.toString()==""){
+                textView1.text="２つの値を入力してください。"
+            } else {
+                num1 = editText1.text.toString().toDouble()
+                num2 = editText2.text.toString().toDouble()
+                num3 = num1 + num2
+                textView1.text =num3.toString()
+            }
 
         }
         button2.setOnClickListener {
-            Log.d("UI_PARTS", "-ボタンをタップしました")
-            Log.d("UI_PARTS", "+ボタンをタップしました")
-            Log.d("UI_PARTS", editText1.text.toString())
-            Log.d("UI_PARTS", editText2.text.toString())
-            num1 = editText1.text.toString().toDouble()
-            num2 = editText2.text.toString().toDouble()
-            num3 = num1 - num2
-            textView1.text =num3.toString()
+            if (editText1.text.toString()=="" || editText2.text.toString()==""){
+                textView1.text="２つの値を入力してください。"
+            } else {
+                num1 = editText1.text.toString().toDouble()
+                num2 = editText2.text.toString().toDouble()
+                num3 = num1 - num2
+                textView1.text =num3.toString()
+            }
         }
         button3.setOnClickListener {
-            Log.d("UI_PARTS", "*ボタンをタップしました")Log.d("UI_PARTS", "+ボタンをタップしました")
-            Log.d("UI_PARTS", editText1.text.toString())
-            Log.d("UI_PARTS", editText2.text.toString())
-            num1 = editText1.text.toString().toDouble()
-            num2 = editText2.text.toString().toDouble()
-            num3 = num1 * num2
-            textView1.text =num3.toString()
+            if (editText1.text.toString()=="" || editText2.text.toString()==""){
+                textView1.text="２つの値を入力してください。"
+            } else {
+                num1 = editText1.text.toString().toDouble()
+                num2 = editText2.text.toString().toDouble()
+                num3 = num1 * num2
+                textView1.text =num3.toString()
+            }
         }
         button4.setOnClickListener {
-            Log.d("UI_PARTS", "/ボタンをタップしました")Log.d("UI_PARTS", "+ボタンをタップしました")
-            Log.d("UI_PARTS", editText1.text.toString())
-            Log.d("UI_PARTS", editText2.text.toString())
-            num1 = editText1.text.toString().toDouble()
-            num2 = editText2.text.toString().toDouble()
-            num3 = num1 / num2
-            textView1.text =num3.toString()
+            if (editText1.text.toString()=="" || editText2.text.toString()==""){
+                textView1.text="２つの値を入力してください。"
+            } else {
+                num1 = editText1.text.toString().toDouble()
+                num2 = editText2.text.toString().toDouble()
+                num3 = num1 / num2
+                textView1.text =num3.toString()
+            }
         }
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
